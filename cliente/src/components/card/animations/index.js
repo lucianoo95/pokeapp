@@ -3,14 +3,12 @@ import anime from "animejs/lib/anime.es.js";
 const mainPhotoAnimation = () => {
   return anime({
     targets: ".anime-card",
-    translateY: [3, -2, 3],
-    translateX: [5, -5],
+    translateY: [0, 5],
     scale: [1.003, 0.998],
     rotateY: [-7, 5],
     rotateZ: -0.5,
     skewX: 0.2,
     skewY: 0.2,
-    duration: 1200,
     direction: "alternate",
     loop: true,
     easing: "easeInOutSine",
@@ -27,4 +25,60 @@ const mainPhotoShadowAnimation = () => {
     easing: "easeInOutSine",
   });
 };
-export { mainPhotoAnimation, mainPhotoShadowAnimation };
+const mainPhotoInAnimation = (mainPhotoAnimation) => {
+  return anime({
+    targets: ".anime-card",
+    translateY: [-1000, 0],
+    opacity: [0, 1],
+    easing: "easeInOutSine",
+    skewX: 0.2,
+    skewY: 0.2,
+    complete: function () {
+      mainPhotoAnimation();
+    },
+  });
+};
+const mainShadowInAnimation = () => {
+  return anime({
+    targets: ".anime-shadow",
+    opacity: [0, 1],
+    duration: 500,
+    delay: 1000,
+    complete: function () {
+      mainPhotoAnimation();
+    },
+  });
+};
+const mainTitleAnimation = () => {
+  return anime({
+    targets: ".anime-title",
+    translateY: [50, 0],
+    opacity: [0, 1],
+    delay: 800,
+  });
+};
+const cardHoverAnimation = () => {
+  return anime({
+    targets: ".anime-cardContainer",
+    translateY: -30,
+    filter: "brightness(100%)",
+    easing: "easeOutExpo",
+  });
+};
+const cardNotHoverAnimation = () => {
+  return anime({
+    targets: ".anime-cardContainer",
+    translateY: 0,
+    filter: "brightness(85%)",
+    easing: "easeOutExpo",
+  });
+};
+export {
+  mainPhotoAnimation,
+  mainPhotoShadowAnimation,
+  mainPhotoInAnimation,
+  mainShadowInAnimation,
+  mainTitleAnimation,
+  cardHoverAnimation,
+  cardNotHoverAnimation,
+};
