@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import View from "./views/view";
 
 const Card = () => {
-  return <View />;
+  const [isHover, setIshover] = useState(false);
+  return <View isHover={isHover} setIshover={setIshover} />;
 };
 export default Card;
