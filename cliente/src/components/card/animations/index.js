@@ -54,14 +54,14 @@ const mainTitleAnimation = () => {
     targets: ".anime-title",
     translateY: [50, 0],
     opacity: [0, 1],
-    delay: 800,
+    delay: anime.stagger(450, { start: 800 }),
   });
 };
 const cardHoverAnimation = () => {
   return anime({
     targets: ".anime-cardContainer",
     translateY: -30,
-    filter: "brightness(100%)",
+    filter: "brightness(125%)",
     easing: "easeOutExpo",
   });
 };
@@ -73,6 +73,19 @@ const cardNotHoverAnimation = () => {
     easing: "easeOutExpo",
   });
 };
+const cardFlipAnimation = () => {
+  return anime({
+    targets: ".anime-cardContainer",
+    rotateY: 360,
+  });
+};
+const buttonsInAnimation = () => {
+  return anime({
+    targets: ".anime-button",
+    opacity: 1,
+    delay: anime.stagger(-500, { start: 1000 }),
+  });
+};
 export {
   mainPhotoAnimation,
   mainPhotoShadowAnimation,
@@ -81,4 +94,6 @@ export {
   mainTitleAnimation,
   cardHoverAnimation,
   cardNotHoverAnimation,
+  cardFlipAnimation,
+  buttonsInAnimation,
 };

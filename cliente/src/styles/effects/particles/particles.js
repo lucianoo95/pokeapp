@@ -21,14 +21,7 @@ const Bubbles = ({ height }) => {
           collisions: {
             enable: true,
           },
-          line_linked: {
-            enable: true,
-            shadow: {
-              enable: true,
-              color: "#3CA9D1",
-              blur: 5,
-            },
-          },
+
           size: {
             value: 5,
             random: true,
