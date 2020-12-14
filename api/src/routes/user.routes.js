@@ -1,8 +1,8 @@
 import { UserController } from '../controllers';
+import { authJwt } from '../middlewares';
 import { Router } from 'express';
 const router = Router();
 
-router.get('/list', UserController.list);
-router.post('/add', UserController.add);
+router.get('/list', [authJwt.verifyToken, authJwt.verifyRole], UserController.list);
 
 export default router;
