@@ -1,3 +1,3 @@
-import Bubbles from "./particles";
+import Bubbles from "./bubbles";
 
 export { Bubbles };

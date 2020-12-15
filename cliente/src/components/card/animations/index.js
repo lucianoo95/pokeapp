@@ -76,7 +76,7 @@ const cardNotHoverAnimation = () => {
 const cardFlipAnimation = () => {
   return anime({
     targets: ".anime-cardContainer",
-    rotateY: 360,
+    rotateY: -360,
   });
 };
 const buttonsInAnimation = () => {
