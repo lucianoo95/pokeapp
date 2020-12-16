@@ -1,3 +1,3 @@
-import Pokedex from "./container.js";
+import Pokedex from './container.js'
 
-export default Pokedex;
+export default Pokedex

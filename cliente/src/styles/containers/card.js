@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Card = styled.div`
   height: 420px;
@@ -15,5 +15,5 @@ const Card = styled.div`
     rgba(10, 45, 78, 1) 25%,
     rgba(2, 65, 110, 1) 72%
   );
-`;
-export default Card;
+`
+export default Card

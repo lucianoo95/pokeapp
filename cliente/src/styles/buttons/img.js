@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 //prettier-ignore
 const ImgButton = styled.button`
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: none;
   border-radius: 50%;
   padding: 6px;
@@ -24,8 +24,9 @@ const ImgButton = styled.button`
   }
   &&:active{
       filter:grayscale(100%) invert(100%);
+      transform: translateY(3px);
       border:none;
   }
 `;
 
-export default ImgButton;
+export default ImgButton

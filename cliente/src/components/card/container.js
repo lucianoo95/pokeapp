@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import View from "./views/view";
+import React, { useState } from 'react'
+import View from './views/view'
 
 const Card = () => {
-  const [isHover, setIshover] = useState(false);
-  const [side, setSide] = useState(true);
+  const [isHover, setIshover] = useState(false)
+  const [side, setSide] = useState(true)
 
   return (
     <View
@@ -12,6 +12,6 @@ const Card = () => {
       side={side}
       setSide={setSide}
     />
-  );
-};
-export default Card;
+  )
+}
+export default Card

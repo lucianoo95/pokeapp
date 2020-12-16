@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const TransparentButton = styled.button`
-  font-family: "Ubuntu";
+  font-family: 'Ubuntu';
   font-styled: bold;
   font-size: 10px;
   font-weigth: 1000;
   opacity: 0;
-  margin-top: 5px;
+  margin-top: -4px;
   width: 38px;
   height: 38px;
   border: none;
@@ -25,10 +25,11 @@ const TransparentButton = styled.button`
   }
   &&:active {
     background-color: #dfdfdf;
+    transform: translateY(3px);
     color: #2c2c2c;
     box-shadow: 0px 0px 5px #dfdfdf;
     border: none;
   }
-`;
+`
 
-export default TransparentButton;
+export default TransparentButton

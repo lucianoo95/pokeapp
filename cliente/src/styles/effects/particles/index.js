@@ -1,3 +1,3 @@
-import Bubbles from "./bubbles";
+import Bubbles from './bubbles'
 
-export { Bubbles };
+export { Bubbles }

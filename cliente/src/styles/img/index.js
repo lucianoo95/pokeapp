@@ -1,3 +1,3 @@
-import MainPhoto from "./main";
+import MainPhoto from './main'
 
-export { MainPhoto };
+export { MainPhoto }

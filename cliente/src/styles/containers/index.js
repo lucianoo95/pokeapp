@@ -1,4 +1,4 @@
-import Card from "./card.js";
-import GenericContainer from "./generic";
+import Card from './card.js'
+import GenericContainer from './generic'
 
-export { Card, GenericContainer };
+export { Card, GenericContainer }

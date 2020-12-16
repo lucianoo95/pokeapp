@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Diamond = styled.div`
   height: ${(props) => props.height};
@@ -16,5 +16,5 @@ const Diamond = styled.div`
     rgba(59, 150, 250, 0.5) 35%,
     rgba(0, 0, 0, 0) 100%
   );
-`;
-export default Diamond;
+`
+export default Diamond

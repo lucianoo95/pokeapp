@@ -1,4 +1,4 @@
-import Title from "./title";
-import Ability from "./ability";
+import Title from './title'
+import Ability from './ability'
 
-export { Title, Ability };
+export { Title, Ability }

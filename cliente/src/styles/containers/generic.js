@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const GenericContainer = styled.div`
   display: flex;
@@ -6,6 +6,6 @@ const GenericContainer = styled.div`
   justify-content: space-around;
   width: 100%;
   margin: -25px 25px;
-`;
+`
 
-export default GenericContainer;
+export default GenericContainer

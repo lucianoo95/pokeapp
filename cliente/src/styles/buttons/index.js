@@ -1,3 +1,4 @@
-import TransparentButton from "./transparent";
-import ImgButton from "./img";
-export { TransparentButton, ImgButton };
+import TransparentButton from './transparent'
+import ImgButton from './img'
+import OneCharButton from './oneChar'
+export { TransparentButton, ImgButton, OneCharButton }

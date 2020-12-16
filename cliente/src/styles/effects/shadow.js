@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Shadow = styled.div`
   height: 140px;
@@ -11,6 +11,6 @@ const Shadow = styled.div`
   margin-top: 160px;
   transform: rotateX(85deg);
   box-shadow: 0px 10px 25px #222222;
-`;
+`
 
-export default Shadow;
+export default Shadow
