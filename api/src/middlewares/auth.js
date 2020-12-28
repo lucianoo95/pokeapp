@@ -6,11 +6,14 @@ const { SECRET_KEY } = process.env;
 
 export const verifyToken = (req, res, next) => {
   try {
-    const token = req.headers['authorization'];
+    let token = req.headers['authorization'];
     if (!token) return res.status(403).json({
       ok: false,
       message: 'No token provided'
     });
+
+    // Remover BEARER del token
+    token = token.slice(7);
 
     const decoded = jwt.verify(token, SECRET_KEY);
     req.userId = decoded.id;
