@@ -3,6 +3,7 @@ config();
 const { DATABASE_URL } = process.env;
 import mongoose from "mongoose";
 import { success, info, error } from "consola";
+import { User } from '../models';
 
 // Conectar a la base de datos
 mongoose.connect(DATABASE_URL, {
@@ -29,6 +30,19 @@ const cleanCollections = () => {
   });
 };
 
+const loadAdmin = async () => {
+  let admin = await User.find({ email: 'admin' });
+  if (!admin.length) {
+    admin = await User.create({
+      name: 'admin',
+      lastname: 'admin',
+      email: 'admin',
+      password: await User.encryptPassword('admin'),
+      isAdmin: true
+    });
+  }
+}
+
 // Error de conexion
 mongooseConn.on("error", (errorDB, response) => {
   error({
@@ -48,7 +62,10 @@ mongooseConn.once("open", (error, response) => {
   });
 
   // Borrar datos de las colecciones.
-  //cleanCollections();
+  // cleanCollections();
+
+  // Cargar ADMIN
+  loadAdmin();
 });
 
 // Escuchar desconexion mongoose
