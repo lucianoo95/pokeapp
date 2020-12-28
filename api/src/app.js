@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
+import { handleError } from './config/error.config';
 import routes from './routes';
 import { config } from "dotenv";
 config();
@@ -37,5 +38,8 @@ app.use(express.json());
 
 // config global de rutas
 app.use('/api/v1', routes);
+
+// Error catching endware.
+app.use(handleError);
 
 export default app;
