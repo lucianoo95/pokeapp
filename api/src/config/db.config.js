@@ -48,7 +48,7 @@ mongooseConn.once("open", (error, response) => {
   });
 
   // Borrar datos de las colecciones.
-  // cleanCollections();
+  //cleanCollections();
 });
 
 // Escuchar desconexion mongoose
